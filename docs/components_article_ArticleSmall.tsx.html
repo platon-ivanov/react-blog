@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> components/article/ArticleSmall.tsx</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">Blog Documentation</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Components</h3><ul><li><a href="App.html">App</a></li></ul><h3>Components / Article</h3><ul><li><a href="ArticleFull.html">ArticleFull</a></li><li><a href="ArticlePicture.html">ArticlePicture</a></li><li><a href="ArticlePictureFull.html">ArticlePictureFull</a></li><li><a href="ArticleSmall.html">ArticleSmall</a></li><li><a href="Image.html">Image</a></li><li><a href="Quote.html">Quote</a></li><li><a href="TurningImage.html">TurningImage</a></li><li><a href="Video.html">Video</a></li></ul><h3>Components / General</h3><ul><li><a href="Footer.html">Footer</a></li><li><a href="Header.html">Header</a></li><li><a href="Main.html">Main</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>components/article/ArticleSmall.tsx</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import * as React from 'react'
+
+type Props = {
+	changeArticle: Function
+	article: {
+		header: string
+		url: string
+		description: string
+		cover: string | null | undefined
+	}
+}
+
+/**
+ * Article preview in grid.
+ * @component
+ * @subcategory Article
+ */
+const ArticleSmall = ({
+	article: { header, url, description, cover },
+	changeArticle,
+}: Props) => {
+	return (
+		&lt;article
+			className='animate-appear-top text-quartiary hover:z-20 group hover:bg-white-transparent-less bg-white-transparent hover:scale-105 relative z-10 h-full p-4 pb-0 transform rounded shadow-xl cursor-pointer select-none'
+			style={{
+				transition: 'transform 200ms, background-color 200ms',
+				minHeight: '12rem',
+			}}
+			onClick={() => changeArticle(url)}
+		>
+			&lt;div className='top-8 sm:top-auto md:w-3/4 relative z-20 w-full'>
+				&lt;h3 className='group-hover:before:translate-x-0 group-hover:before:translate-y-0 before:transition-transform w-fit before:top-0 before:left-0 before:absolute before:w-full before:-z-10 before:h-full before:translate-x-4 before:translate-y-4 before:bg-white-transparent relative z-10 p-1 my-4 text-3xl font-bold transform'>
+					{header}
+				&lt;/h3>
+				&lt;p>{description}&lt;/p>
+			&lt;/div>
+
+			{cover ? (
+				&lt;img
+					src={cover}
+					alt={header + ' фото'}
+					aria-label={header}
+					className='group-hover:scale-110 sm:absolute max-w-1/2 sm:max-w-1/3 relative bottom-0 right-0 z-10 object-contain w-full max-h-full ml-auto text-transparent transition-transform origin-bottom-right'
+				/>
+			) : null}
+		&lt;/article>
+	)
+}
+
+export default ArticleSmall
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

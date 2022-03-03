@@ -1,0 +1,53 @@
+/* @import './styles/main.scss'; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Secular One';
+	src: url('./fonts/SecularOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('./fonts/Raleway-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-family: 'Praise';
+	src: url('./fonts/Praise-Regular.ttf');
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: rbg(0, 0, 0);
+	@apply text-text;
+}
+
+img {
+	max-width: 100%;
+}
+
+@layer components {
+	@keyframes appearTop {
+		from {
+			transform: translateY(-1rem);
+			opacity: 0;
+		}
+
+		50% {
+			opacity: 1;
+		}
+
+		to {
+			transform: translateY(0);
+		}
+	}
+}

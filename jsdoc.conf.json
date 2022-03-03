@@ -1,0 +1,28 @@
+{
+	"tags": {
+		"allowUnknownTags": true,
+		"dictionaries": ["jsdoc", "closure"]
+	},
+	"source": {
+		"include": ["src"],
+		"includePattern": ".+\\.(jsx|js|ts|tsx|jsdoc)$",
+		"excludePattern": "(^|\\/|\\\\)_"
+	},
+	"plugins": [
+		"node_modules/better-docs/typescript",
+		"node_modules/better-docs/component",
+		"plugins/markdown",
+		"node_modules/better-docs/category"
+	],
+	"templates": {
+		"better-docs": {
+			"name": "Blog Documentation"
+		}
+	},
+	"opts": {
+		"destination": "docs",
+		"recurse": true,
+		"readme": "README.md",
+		"template": "node_modules/better-docs"
+	}
+}
