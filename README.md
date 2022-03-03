@@ -1,6 +1,6 @@
 # React blog
 
-The components used in [diana-kassil-ivanova.ru](https://diana-kassil-ivanova.ru/).
+This repository includes the source code for the website [diana-kassil-ivanova.ru](https://diana-kassil-ivanova.ru/).
 
 ## Tasks ✅
 
@@ -37,6 +37,11 @@ Articles include:
 - **Short description** of the article
 - **Content** in JSX using custom components.
 - **Cover** image (optional)
+
+### Documentation
+
+The components should be documented in a list. The simplest way to achieve this was by using [better-docs](https://github.com/SoftwareBrothers/better-docs).
+The component documentation can be found [here](https://platon-ivanov.github.io/react-blog/).
 
 ## Tools 🔧
 
